@@ -16,9 +16,6 @@ namespace DesignPatternChallenge_Prototype
         {
             Console.WriteLine("Criando template de Contrato de Serviço a partir do protótipo armazenado no registry...");
 
-            // Simulando processo custoso de inicialização
-            Thread.Sleep(100);
-
             return GetAndCustomizeTemplateFromRegistry(
                 title: "Contrato de Prestação de Serviços",
                 sectionContent: "O presente contrato tem por objeto...",
@@ -28,8 +25,6 @@ namespace DesignPatternChallenge_Prototype
         public DocumentTemplate CreateConsultingContract()
         {
             Console.WriteLine("Criando template de Contrato de Consultoria a partir do protótipo armazenado no registry...");
-
-            Thread.Sleep(100);
 
             return GetAndCustomizeTemplateFromRegistry(
                 title: "Contrato de Consultoria",

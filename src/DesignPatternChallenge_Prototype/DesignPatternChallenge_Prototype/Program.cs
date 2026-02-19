@@ -1,7 +1,7 @@
 ﻿// DESAFIO: Sistema de Templates de Documentos
 // PROBLEMA: Um sistema de gerenciamento documental precisa criar novos documentos
 // baseados em templates pré-configurados complexos (contratos, propostas, relatórios)
-// O código atual recria objetos do zero, perdendo muito tempo em inicializações
+// O código anterior recriava objetos do zero, perdendo muito tempo em inicializações.
 
 using DesignPatternChallenge_Prototype;
 using DesignPatternChallenge_Prototype.Prototypes;
@@ -42,6 +42,9 @@ public class Program
 
     private static IPrototype CreateDocumentTemplate()
     {
+        // Simulando processo custoso de inicialização
+        Thread.Sleep(100);
+
         var template = new DocumentTemplate
         {
             Category = "Contratos",
